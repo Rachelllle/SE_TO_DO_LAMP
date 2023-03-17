@@ -18,12 +18,17 @@ switch($vars['action']){
     }break;
     
     case "delete":{
-        //Some code here to delete ....
+        $db->query("DELETE FROM items WHERE item_id = ?",$vars['item_id']);
+        header("location: index.php");
         exit;        
     }break;
-    
+
+   
     case "do_edit":{
-        //some code here to edit and save...
+        $title= $_POST['title'];
+        $item_id=$_POST['item_id'];
+        $db->query("UPDATE items SET title = '$title' WHERE item_id = $item_id");
+        header("location: index.php");
         exit;
     }break;
     
