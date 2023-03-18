@@ -27,7 +27,7 @@ function get_input_vars(){
 }
 
 function parse_mdy_time($str){
-	if (is_empty($str))return 0;
+	if (empty($str))return 0;
 	$d=explode("/", $str);
 	if (count($d)!=3)return 0;
 	if (is_numeric($d[0]) && is_numeric($d[1]) && is_numeric($d[2]))

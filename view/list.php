@@ -23,15 +23,19 @@
                   </div>
                   <input type="text" readonly class="form-control " aria-label="Text input with checkbox" value="<?php echo htmlspecialchars($items[$i]['title']);?>">
                   <div class="input-group-append">
-                    <button  class="btn btn-outline-secondary bg-danger text-white" type="button"  id="button-addon2" onclick="location='index.php?action=delete&item_id=<?php echo $items[$i]['item_id'];?>'">X</button>
+                  <button  class="btn btn-outline-secondary bg-danger text-white" type="button"  id="button-addon2" onclick="location='view/edit.php?item_id=<?php echo $items[$i]['item_id'];?>&old_title=<?php echo $items[$i]['title'];?>'">edit</button>
+                  <button  class="btn btn-outline-secondary bg-danger text-white" type="button"  id="button-addon2" onclick="location='index.php?action=delete&item_id=<?php echo $items[$i]['item_id'];?>'">X</button>
                   </div>
                   </div>
-            </div>
+              </div>
   
             
             <?php
             }
           ?>
-      </div>
+          <button  class="btn btn-outline-secondary bg-danger text-white" type="button"  id="button-addon2" onclick="location='view/test.php'">logout</button>
+          </div>
+          
+
     
     
