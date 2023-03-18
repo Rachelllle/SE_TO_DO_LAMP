@@ -11,4 +11,12 @@ ALTER TABLE `items`
 
 ALTER TABLE `items`
   MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT;
+  
+  CREATE TABLE users (
+    id int(11) NOT NULL,
+    username varchar(255),
+    email varchar(255) NOT NULL,
+    password varchar(255) NOT NULL
+    );
+    
 COMMIT;
